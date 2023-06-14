@@ -1,9 +1,12 @@
 import { defineConfig } from "cypress";
 
 export default defineConfig({
+  "video": false,
   e2e: {
+    "reporter": "cypress-mochawesome-reporter",
+    "defaultCommandTimeout": 5000,
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
   },
 });
