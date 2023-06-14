@@ -1,0 +1,22 @@
+{
+  "name": "cytsbootcamp",
+  "version": "1.0.0",
+  "description": "Testing using TypeScript Cypress and Mochawesome reporting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "testing",
+    "cypress",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.14.0",
+    "cypress-mochawesome-reporter": "^3.5.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.1.3"
+  }
+}
