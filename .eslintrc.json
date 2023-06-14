@@ -5,10 +5,14 @@
         "es2021": true,
         "node": true
     },
-    "extends": "standard-with-typescript",
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": "latest"
+        "ecmaVersion": "latest",
+        "project": ["tsconfig.json"]
     },
+    "extends": [
+        "plugin:@typescript-eslint/recommended"
+    ],
     "rules": {
     }
 }
