@@ -52,3 +52,11 @@ Cypress.Commands.add('loginUI', (username, password) => {
     cy.get('#user_password').type(password);
     cy.contains('Sign in').click();
 });
+
+Cypress.Commands.add('submitFeedback', (name, email, subject, message) => {
+    cy.get('#name').type(name);
+    cy.get('#email').type(email);
+    cy.get('#subject').type(subject);
+    cy.get('#comment').type(message);
+    cy.contains('Send Message').click();
+});
