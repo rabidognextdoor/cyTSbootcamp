@@ -35,6 +35,26 @@
 //     }
 //   }
 // }
+Cypress.Commands.add('isVisible', selector => {
+    cy.get(selector).should('be.visible');
+});
+
+Cypress.Commands.add('isHidden', selector => {
+    cy.get(selector).should('not.be.visible');
+});
+
+Cypress.Commands.add('setViewport', viewportSize => {
+    const viewportSizes = {
+        mobile: { width: 375, height: 667 },
+        laptop: { width: 1366, height: 768 },
+        desktop: { width: 1920, height: 1080 },
+        default: { width: 1280, height: 720 },
+    };
+    const { width, height } =
+        viewportSizes[viewportSize] || viewportSizes.default;
+    cy.viewport(width, height);
+});
+
 Cypress.Commands.add('visitHomepage', () => {
     cy.visit('http://zero.webappsecurity.com');
 });
@@ -48,9 +68,11 @@ Cypress.Commands.add('visitFeedbackpage', () => {
 });
 
 Cypress.Commands.add('loginUI', (username, password) => {
+    cy.get('#login_form').should('be.visible');
     cy.get('#user_login').type(username);
     cy.get('#user_password').type(password);
-    cy.contains('Sign in').click();
+    cy.get('#user_remember_me').click();
+    cy.get('input[type="submit"]').click();
 });
 
 Cypress.Commands.add('submitFeedback', (name, email, subject, message) => {
@@ -59,4 +81,8 @@ Cypress.Commands.add('submitFeedback', (name, email, subject, message) => {
     cy.get('#subject').type(subject);
     cy.get('#comment').type(message);
     cy.contains('Send Message').click();
+});
+
+Cypress.Commands.add('waitForSeconds', seconds => {
+    cy.wait(seconds * 1000);
 });
