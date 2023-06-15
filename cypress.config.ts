@@ -1,4 +1,5 @@
 import { defineConfig } from 'cypress';
+import mochawesome from 'cypress-mochawesome-reporter/plugin';
 
 export default defineConfig({
     video: false,
@@ -6,7 +7,7 @@ export default defineConfig({
         reporter: 'cypress-mochawesome-reporter',
         defaultCommandTimeout: 5000,
         setupNodeEvents(on, config) {
-            require('cypress-mochawesome-reporter/plugin')(on);
+            mochawesome(on);
         },
     },
 });
