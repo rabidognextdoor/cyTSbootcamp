@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "cy:run-dashboard": "cypress run --record --key f0b0dd37-8104-48ad-9e58-68904a0bbd17"
   },
   "keywords": [
     "testing",
