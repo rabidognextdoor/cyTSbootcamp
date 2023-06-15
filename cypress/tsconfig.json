@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "baseUrl": "../node_modules",
-    "types": ["cypress", "node"],
+    "types": [
+      "cypress",
+      "node"
+    ],
   },
   "include": ["**/*.ts"],
 
