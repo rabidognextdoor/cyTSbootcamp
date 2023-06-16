@@ -9,6 +9,7 @@ export default defineConfig({
     env: {
         screenshotsFolder: './cypress/snapshots/actual',
         trashAssetsBeforeRuns: true,
+        url: 'http://zero.webappsecurity.com/',
     },
     e2e: {
         reporter: 'cypress-mochawesome-reporter',
