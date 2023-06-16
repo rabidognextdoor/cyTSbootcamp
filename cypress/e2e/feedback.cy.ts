@@ -1,8 +1,14 @@
+import FeedbackPage from '../page-objects/pages/feedbackPage';
+
 describe('Feedback test', () => {
+    before(() => {
+        FeedbackPage.load();
+    });
     it('Should submit feedback form', () => {
-        cy.visitFeedbackpage();
-        cy.fixture('feedbackData').then(({ name, email, subject, message }) => {
-            cy.submitFeedback(name, email, subject, message);
-        });
+        FeedbackPage.fillFeedback();
+        FeedbackPage.submitFeedback();
+        cy.contains(
+            'They will be reviewed by our Customer Service staff and given the full attention that they deserve.'
+        ).should('be.visible');
     });
 });
