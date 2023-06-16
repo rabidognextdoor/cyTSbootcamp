@@ -6,6 +6,10 @@ describe('Full login spec', () => {
         cy.visit(`${Cypress.env('url')}`);
         Navbar.clickSignIn();
     });
+    it('Ensures that unauthorized users are redirected to sign-in page', () => {
+        cy.visit('http://zero.webappsecurity.com/bank/account-summary.html');
+        loginPage.displaySignInButton();
+    });
     it('Failed login test', () => {
         loginPage.login('invalid username', 'invalid password');
         loginPage.displayErrorMessage();

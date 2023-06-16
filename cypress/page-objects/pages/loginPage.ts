@@ -12,4 +12,8 @@ export default class loginPage extends BasePage {
     static displayErrorMessage() {
         cy.isVisible('.alert-error');
     }
+
+    static displaySignInButton() {
+        cy.isVisible('input[type="submit"]');
+    }
 }
