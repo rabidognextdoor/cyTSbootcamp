@@ -4,11 +4,11 @@ import LoginPage from './loginPage';
 Given('I open login page', () => {
     LoginPage.visit();
 });
-When('I fill out username', () => {
-    LoginPage.fillUsername('username');
+When('I fill username with {string}', (username: string) => {
+    LoginPage.fillUsername(username);
 });
-When('I fill out password', () => {
-    LoginPage.fillPassword('password');
+When('I fill password with {string}', (password: string) => {
+    LoginPage.fillPassword(password);
 });
 When('I submit login', () => {
     LoginPage.submitForm();

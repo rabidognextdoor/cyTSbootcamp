@@ -5,7 +5,7 @@ Feature: Login to application
 
   Scenario: Valid login
     Given I open login page
-    When I fill out username
-    When I fill out password
+    When I fill username with "username"
+    When I fill password with "password"
     When I submit login
     Then I should see homepage
