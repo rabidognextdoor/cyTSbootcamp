@@ -1,19 +1,20 @@
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
+import LoginPage from './loginPage';
 
 Given('I open login page', () => {
-    cy.visit(`${Cypress.env('url')}login.html`);
+    LoginPage.visit();
 });
 When('I fill out username', () => {
-    cy.get('#user_login').type('username');
+    LoginPage.fillUsername('username');
 });
 When('I fill out password', () => {
-    cy.get('#user_password').type('password');
+    LoginPage.fillPassword('password');
 });
 When('I submit login', () => {
-    cy.get('input[type="submit"]').click();
+    LoginPage.submitForm();
 });
-When('I check the forgot password box', () => {
-    cy.get('#user_remember_me').click();
+When('I check the keep me signed in box', () => {
+    LoginPage.checkKeepSigned();
 });
 Then('I should see homepage', () => {
     cy.get('#account_summary_tab').should('be.visible');
