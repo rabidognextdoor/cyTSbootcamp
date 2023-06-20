@@ -19,3 +19,6 @@ When('I check the keep me signed in box', () => {
 Then('I should see homepage', () => {
     cy.get('#account_summary_tab').should('be.visible');
 });
+Then('I should see error message', () => {
+    LoginPage.shouldShowError();
+});

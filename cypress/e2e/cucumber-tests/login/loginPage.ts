@@ -4,6 +4,7 @@ const userInput = '#user_login';
 const passInput = '#user_password';
 const submitButton = 'input[type="submit"]';
 const rememberMe = '#user_remember_me';
+const errorMessage = '.alert-error';
 
 // Page Object:
 class LoginPage {
@@ -26,6 +27,10 @@ class LoginPage {
     // Submit form
     static submitForm() {
         cy.get(submitButton).click();
+    }
+    // Check for Error
+    static shouldShowError() {
+        cy.get(errorMessage).contains('Login and/or password are wrong.');
     }
 }
 
