@@ -1,6 +1,22 @@
 import { defineConfig } from 'cypress';
-import mochawesome from 'cypress-mochawesome-reporter/plugin';
-import cucumber from 'cypress-cucumber-preprocessor';
+import createBundler from '@bahmutov/cypress-esbuild-preprocessor';
+import { addCucumberPreprocessorPlugin } from '@badeball/cypress-cucumber-preprocessor';
+import createEsbuildPlugin from '@badeball/cypress-cucumber-preprocessor/esbuild';
+
+async function setupNodeEvents(
+    on: Cypress.PluginEvents,
+    config: Cypress.PluginConfigOptions
+): Promise<Cypress.PluginConfigOptions> {
+    await addCucumberPreprocessorPlugin(on, config);
+
+    on(
+        'file:preprocessor',
+        createBundler({
+            plugins: [createEsbuildPlugin(config)],
+        })
+    );
+    return config;
+}
 
 export default defineConfig({
     projectId: 'x5f4v6',
@@ -15,11 +31,9 @@ export default defineConfig({
     },
     e2e: {
         reporter: 'cypress-mochawesome-reporter',
+        specPattern: '**/*.feature',
         defaultCommandTimeout: 5000,
         pageLoadTimeout: 10000,
-        setupNodeEvents(on, config) {
-            on('file:preprocessor', cucumber());
-            mochawesome(on);
-        },
+        setupNodeEvents,
     },
 });
