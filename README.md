@@ -3,14 +3,15 @@ Cypress automated testing project. Built using TypeScript.
 
 ## Setup
 
-## Config
+## Setup Notes
 * New chainable commands can be declared in `/support/index.d.ts` and then built inside of `/support/commands.ts`.
-* Use JSDocs to notate the custom commands created in those files 
+* Use JSDocs to notate the custom commands created in those files
+* in .feature files use the `@focus` tag about the scenario to essentially perform `.only`  
 
-## Notes
+## Package notes
 
 * prettier :white_check_mark:
 * eslint :white_check_mark:
 * eslint-cypress-plugin :white_check_mark:
-* mochawesome-reporter :white_check_mark:
-* 
+* cucumber-BDD :white_check_mark:
+* cucumber-preprocessor :white_check_mark: 

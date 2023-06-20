@@ -11,7 +11,7 @@ Feature: Login to application
     And I fill password with "invalid-password"
     And I submit login
     Then I should see error message
-
+    
   Scenario: Valid login
     Given I open login page
     When I fill username with "username"
