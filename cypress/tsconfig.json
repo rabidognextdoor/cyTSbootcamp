@@ -3,7 +3,8 @@
     "baseUrl": "../node_modules",
     "types": [
       "cypress",
-      "node"
+      "node",
+      "@percy/cypress"
     ],
   },
   "include": ["**/*.ts"],
