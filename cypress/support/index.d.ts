@@ -67,6 +67,17 @@ declare global {
                 name: string,
                 widths: { widths: number[] }
             ): Chainable<Element>;
+
+            /**
+             * Takes snapshots with Percy using the name of the page and the scope
+             * of the element that is under test
+             * @param name - The name of the page under test
+             * @param scope - the selector to be passed to target the desired element
+             */
+            snapElement(
+                name: string,
+                scope: { scope: string }
+            ): Chainable<Element>;
         }
     }
 }

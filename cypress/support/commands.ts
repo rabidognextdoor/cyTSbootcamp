@@ -107,3 +107,9 @@ Cypress.Commands.add(
         cy.percySnapshot(name, widths);
     }
 );
+Cypress.Commands.add(
+    'snapElement',
+    (name: string, scope: { scope: string }) => {
+        cy.percySnapshot(name, scope);
+    }
+);
