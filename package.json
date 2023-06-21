@@ -9,16 +9,17 @@
     "cy:run:chrome": "cypress run --browser chrome",
     "cy:run:firefox": "cypress run --browser firefox",
     "cy:run:electron": "cypress run --browser electron",
-    "cy:run-dashboard": "cypress run --record --key f0b0dd37-8104-48ad-9e58-68904a0bbd17"
+    "cy:run-dashboard": "cypress run --record --key f0b0dd37-8104-48ad-9e58-68904a0bbd17",
+    "percy:cy":  "percy exec -- cypress run"
   },
   "keywords": [
-    "testing",
-    "cypress",
-    "automation",
+    "Testing",
+    "Cypress",
+    "Automation",
     "BDD",
     "Cucumber",
-    "typescript",
-    "Javascript"
+    "Typescript",
+    "Percy"
   ],
   "author": "",
   "license": "ISC",
@@ -26,6 +27,8 @@
     "@badeball/cypress-cucumber-preprocessor": "^18.0.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "@cucumber/cucumber": "^9.1.2",
+    "@percy/cli": "^1.26.0",
+    "@percy/cypress": "^3.1.2",
     "@types/cypress-cucumber-preprocessor": "^4.0.1",
     "@typescript-eslint/parser": "^5.59.11",
     "cypress": "^12.14.0",
