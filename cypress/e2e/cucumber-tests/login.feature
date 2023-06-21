@@ -9,6 +9,7 @@ Feature: Login to application
     Given I open login page
     And I want to wait for 2000 milliseconds
     And I see "Zero - Log in" in the title
+    And I see "/login" in the url
     When I fill username with "invalid-username"
     And I fill password with "invalid-password"
     And I submit login
