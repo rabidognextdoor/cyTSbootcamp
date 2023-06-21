@@ -98,5 +98,12 @@ Cypress.Commands.add('snapshotName', (name: string) => {
 });
 
 Cypress.Commands.add('responsiveSnap', (name: string) => {
-    cy.percySnapshot(name, { widths: [768, 992, 1200] });
+    cy.percySnapshot(name, { widths: [375, 768, 992, 1080] });
 });
+
+Cypress.Commands.add(
+    'snapResolution',
+    (name: string, widths: { widths: number[] }) => {
+        cy.percySnapshot(name, widths);
+    }
+);

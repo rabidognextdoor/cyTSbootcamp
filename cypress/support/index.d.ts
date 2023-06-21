@@ -56,6 +56,17 @@ declare global {
              * @param name - the name of the screenshot to be saved
              */
             responsiveSnap(name: string): Chainable<Element>;
+
+            /**
+             * Takes snapshots with Percy using name of page, and takes an object of
+             * breakpoint widths in order to take screenshots at all sizes
+             * @param name - The name of the page being captured
+             * @param widths - the object containing the array of widths to use as the screenshot resolutions
+             */
+            snapResolution(
+                name: string,
+                widths: { widths: number[] }
+            ): Chainable<Element>;
         }
     }
 }
