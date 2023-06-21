@@ -20,4 +20,5 @@ Cypress automated testing project. Built using TypeScript.
 * eslint :white_check_mark:
 * eslint-cypress-plugin :white_check_mark:
 * cucumber-BDD :white_check_mark:
-* cucumber-preprocessor :white_check_mark: 
+* cucumber-preprocessor :white_check_mark:
+* percy-io :white_check_mark: 
