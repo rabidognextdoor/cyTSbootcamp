@@ -35,6 +35,8 @@
 //     }
 //   }
 // }
+import '@percy/cypress';
+
 Cypress.Commands.add('isVisible', selector => {
     cy.get(selector).should('be.visible');
 });
@@ -85,4 +87,16 @@ Cypress.Commands.add('submitFeedback', (name, email, subject, message) => {
 
 Cypress.Commands.add('waitForSeconds', seconds => {
     cy.wait(seconds * 1000);
+});
+
+Cypress.Commands.add('snapshot', () => {
+    cy.percySnapshot();
+});
+
+Cypress.Commands.add('snapshotName', (name: string) => {
+    cy.percySnapshot(name);
+});
+
+Cypress.Commands.add('responsiveSnap', (name: string) => {
+    cy.percySnapshot(name, { widths: [768, 992, 1200] });
 });

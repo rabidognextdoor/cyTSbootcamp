@@ -39,6 +39,23 @@ declare global {
              * @param seconds - how many seconds should the execution wait
              */
             waitForSeconds(seconds: number): Chainable<Element>;
+
+            /**
+             * Takes snapshot using the Percy tool
+             */
+            snapshot(): Chainable<Element>;
+
+            /**
+             * Takes snapshot using Percy with naming
+             * @param name - the name of the screenshot to be saved
+             */
+            snapshotName(name: string): Chainable<Element>;
+
+            /**
+             * Takes snapshot using Percy with naming at pre-determined breakpoints
+             * @param name - the name of the screenshot to be saved
+             */
+            responsiveSnap(name: string): Chainable<Element>;
         }
     }
 }
