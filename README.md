@@ -1,5 +1,7 @@
 # cyTypeScriptBootcamp
 [![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
+[![npm version](https://badge.fury.io/js/cypress.svg)](https://badge.fury.io/js/cypress)
+
 Cypress automated testing project. Built using TypeScript.
 
 ## Setup
