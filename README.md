@@ -6,7 +6,8 @@ Cypress automated testing project. Built using TypeScript.
 ## Setup Notes
 * New chainable commands can be declared in `/support/index.d.ts` and then built inside of `/support/commands.ts`.
 * Use JSDocs to notate the custom commands created in those files
-* in .feature files use the `@focus` tag about the scenario to essentially perform `.only`  
+* in .feature files use the `@focus` tag about the scenario to essentially perform `.only`
+* Steps can be found in `/support/step_defenitions/*` 
 
 ## Package notes
 
