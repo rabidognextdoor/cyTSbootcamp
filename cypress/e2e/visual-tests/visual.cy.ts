@@ -1,8 +1,11 @@
-describe('visual regression', () => {
-    it('My First visual regression test', () => {
-        // Load website
-        cy.visit('http://example.com');
-        // Compare snapshots
-        cy.snapshot();
+const pages = ['http://example.com'];
+const sizes = { widths: [375, 768, 992, 1200] };
+
+describe('Visual Regression', () => {
+    pages.forEach(page => {
+        it(`Should match ${page} in resolution defined in snapshot function`, () => {
+            cy.visit(page);
+            cy.snapResolution(`${page}`, sizes);
+        });
     });
 });
