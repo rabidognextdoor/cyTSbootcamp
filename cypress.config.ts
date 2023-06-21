@@ -31,7 +31,8 @@ export default defineConfig({
     },
     e2e: {
         reporter: 'cypress-mochawesome-reporter',
-        specPattern: '**/*.feature',
+        specPattern: ['**/*.feature', '**/*.cy.ts'],
+        excludeSpecPattern: '/cypress/support/*',
         defaultCommandTimeout: 5000,
         pageLoadTimeout: 10000,
         setupNodeEvents,
