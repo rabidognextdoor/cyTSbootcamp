@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "strict": true,
     "esModuleInterop": true,
     "allowJs": true,
+    "paths": {
+      "@badeball/cypress-cucumber-preprocessor/*": ["./node_modules/@badeball/cypress-cucumber-preprocessor/dist/subpath-entrypoints/*"]
+    },
     "target": "ES6",
     "lib": ["ES6", "DOM"],
     "types": [

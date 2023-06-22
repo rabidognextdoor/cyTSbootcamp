@@ -9,8 +9,8 @@
     "cy:run:chrome": "cypress run --browser chrome",
     "cy:run:firefox": "cypress run --browser firefox",
     "cy:run:electron": "cypress run --browser electron",
-    "cy:run-dashboard": "cypress run --record --key f0b0dd37-8104-48ad-9e58-68904a0bbd17",
-    "percy:cy": "percy exec -- cypress run"
+    "cy:record": "cypress run --record --key f0b0dd37-8104-48ad-9e58-68904a0bbd17",
+    "cy:percy": "percy exec -- cypress run"
   },
   "keywords": [
     "Testing",
