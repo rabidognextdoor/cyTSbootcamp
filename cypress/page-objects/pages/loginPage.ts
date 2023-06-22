@@ -1,6 +1,10 @@
 import BasePage from '../BasePage';
 
 export default class loginPage extends BasePage {
+    static visit() {
+        cy.visit('http://zero.webappsecurity.com/login.html');
+    }
+
     static login(username, password) {
         cy.loginUI(username, password);
     }
