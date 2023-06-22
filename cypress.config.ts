@@ -20,7 +20,7 @@ async function setupNodeEvents(
 
 export default defineConfig({
     projectId: 'x5f4v6',
-    video: false,
+    video: true,
     chromeWebSecurity: false,
     waitForAnimations: true,
     env: {
