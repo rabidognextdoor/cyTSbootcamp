@@ -10,7 +10,8 @@
     "cy:run:firefox": "cypress run --browser firefox",
     "cy:run:electron": "cypress run --browser electron",
     "cy:record": "cypress run --record --key f0b0dd37-8104-48ad-9e58-68904a0bbd17",
-    "cy:percy": "percy exec -- cypress run"
+    "cy:percy": "percy exec -- cypress run",
+    "start-jenkins-server":  "java -jar jenkins.war -httpPort=8080 --enable-future-java"
   },
   "keywords": [
     "Testing",
