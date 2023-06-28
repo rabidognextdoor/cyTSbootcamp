@@ -11,7 +11,7 @@
     "cy:run:electron": "cypress run --browser electron",
     "cy:record": "cypress run --record --key f0b0dd37-8104-48ad-9e58-68904a0bbd17",
     "cy:percy": "percy exec -- cypress run",
-    "start-jenkins-server":  "java -jar jenkins.war -httpPort=8080 --enable-future-java"
+    "start-jenkins-server": "java -jar jenkins.war -httpPort=8080 --enable-future-java"
   },
   "keywords": [
     "Testing",
@@ -33,6 +33,7 @@
     "@types/cypress-cucumber-preprocessor": "^4.0.1",
     "@typescript-eslint/parser": "^5.59.11",
     "cypress": "^12.15.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-mochawesome-reporter": "^3.5.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-chai-friendly": "^0.7.2",
@@ -56,6 +57,7 @@
   },
   "stepDefinitions": [
     "cypress/common/*.ts",
-    "cypress/support/step_defenitions/**/*.ts"
+    "cypress/support/step_defenitions/**/*.ts",
+    "cypress/e2e/cucumber-tests/**/*.ts"
   ]
 }
