@@ -1,7 +1,10 @@
 # cyTypeScriptBootcamp
 [![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
-[![npm version](https://badge.fury.io/js/cypress.svg)](https://www.npmjs.com/package/cypress)
-[![npm version](https://badge.fury.io/js/npm.svg)](https://www.npmjs.com/package/npm)
+
+This project uses the following main dependencies: 
+
+- [Cypress](https://www.npmjs.com/package/cypress)
+- [npm](https://www.npmjs.com/package/npm)
 
 
 Cypress automated testing project. Built using TypeScript.
